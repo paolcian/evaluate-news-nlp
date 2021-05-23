@@ -1,0 +1,10 @@
+@use 'base';
+$primary-color: rgb(255, 248, 248);
+
+footer {
+    height: 7vh;
+    background-color: #1d3233;
+    color: $primary-color;
+    text-align: center;
+    padding-top: 2vh;
+}

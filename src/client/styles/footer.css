@@ -1,0 +1,8 @@
+@use 'base';
+footer {
+  height: 7vh;
+  background-color: #1d3233;
+  color: #fff8f8;
+  text-align: center;
+  padding-top: 2vh;
+}
