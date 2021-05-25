@@ -33,6 +33,7 @@ app.get('/test', function (req, res) {
     res.send(mockAPIResponse)
 });
 
+// post request
 app.post('/val', async (req, res) => {
     console.log(req.body);
     const url = req.body.address;
