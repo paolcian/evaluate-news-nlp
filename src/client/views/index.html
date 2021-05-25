@@ -1,37 +1,39 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
-    <head>
-        <meta charset="utf-8">
-        <title>Sentiment Analysis</title>
-        <link rel="preconnect" href="https://fonts.gstatic.com">
-        <link href="https://fonts.googleapis.com/css2?family=KoHo:wght@300;400;600&display=swap" rel="stylesheet">
-        <link rel="stylesheet" href="../styles/resets.css">
-        <link rel="stylesheet" href="../styles/base.css">
-        <link rel="stylesheet" href="../styles/header.css">
-        <link rel="stylesheet" href="../styles/form.css">
-        <link rel="stylesheet" href="../styles/footer.css">
-    </head>
 
-    <body>
+<head>
+    <meta charset="utf-8">
+    <title>Sentiment Analysis</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=KoHo:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../styles/resets.css">
+    <link rel="stylesheet" href="../styles/base.css">
+    <link rel="stylesheet" href="../styles/header.css">
+    <link rel="stylesheet" href="../styles/form.css">
+    <link rel="stylesheet" href="../styles/footer.css">
+</head>
 
-        <header>
-            <div class="head">
-                <h1>News Sentiment Analysis</h1>
-                <h2>Perform a detailed sentiment analysis with MeaningCloud</h2>
-            </div>
-        </header>
+<body>
 
-        <main>
-            <section>
-                <form class="" onsubmit="return Client.handleSubmit(event)">
-                    <label for="finput">Enter URL here:</label>
-                    <input id="url" type="text" name="finput" placeholder="https://www.example.com">
-                    <input id="button" type="submit" value="Submit" onclick="return Client.handleSubmit(event)" onsubmit="return handleSubmit(event)">
-                </form>
-            </section>
+    <header>
+        <div class="head">
+            <h1>News Sentiment Analysis</h1>
+            <h2>Perform a detailed sentiment analysis with MeaningCloud</h2>
+        </div>
+    </header>
 
-            <section>
-                <div class='result'>
+    <main>
+        <section>
+            <form class="" onsubmit="return Client.handleSubmit(event)">
+                <label for="finput">Enter URL here:</label>
+                <input id="url" type="text" name="finput" placeholder="https://www.example.com">
+                <input id="button" type="submit" value="Submit" onclick="return Client.handleSubmit(event)"
+                    onsubmit="return handleSubmit(event)">
+            </form>
+        </section>
+
+        <section>
+            <div class='result'>
                 <p>Results:</p>
                 <div id="results"></div>
                 <div id="model"></div>
@@ -41,12 +43,21 @@
                 <div id="confidence"></div>
                 <div id="irony"></div>
             </div>
-            </section>
-        </main>
+        </section>
+    </main>
 
-        <footer>
-            <p>&copy; 2021 Paulina Nowek</p>
-        </footer>
+    <footer>
+        <p>&copy; 2021 Paulina Nowek</p>
+    </footer>
+    <script>
+        // Check that service workers are supported
+        if ('serviceWorker' in navigator) {
+            // Use the window load event to keep the page load performant
+            window.addEventListener('load', () => {
+                navigator.serviceWorker.register('/service-worker.js');
+            });
+        }
+    </script>
+</body>
 
-    </body>
 </html>

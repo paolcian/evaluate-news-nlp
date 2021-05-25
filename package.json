@@ -10,7 +10,9 @@
   },
   "jest": {
     "collectCoverage": true,
-    "coverageReporters": ["html"]
+    "coverageReporters": [
+      "html"
+    ]
   },
   "keywords": [],
   "author": "",
@@ -40,6 +42,7 @@
     "node-sass": "^4.14.1",
     "sass-loader": "^7.3.1",
     "style-loader": "^0.23.1",
-    "webpack-dev-server": "^3.7.2"
+    "webpack-dev-server": "^3.7.2",
+    "workbox-webpack-plugin": "^6.1.5"
   }
 }

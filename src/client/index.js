@@ -1,5 +1,9 @@
-import { handleSubmit } from './js/formHandler'
-import { checkForUrl} from './js/urlChecker'
+import {
+    handleSubmit
+} from './js/formHandler'
+import {
+    checkForUrl
+} from './js/urlChecker'
 import './styles/resets.scss'
 import './styles/base.scss'
 import './styles/footer.scss'
@@ -12,4 +16,4 @@ console.log('text');
 export {
     handleSubmit,
     checkForUrl
-   }
+}
