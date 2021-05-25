@@ -41,7 +41,9 @@ input {
 }
 .result {
     color: #a72a2a;
-    font-weight: bold;
     text-align: center;
     font-size: 1.5em;
+}
+.result p {
+    font-weight: bold;
 }

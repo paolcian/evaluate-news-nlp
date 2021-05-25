@@ -10,7 +10,7 @@ dotenv.config();
 
 const application_key = process.env.API_KEY;
 const baseURL = 'https://api.meaningcloud.com/sentiment-2.1'
-
+console.log(`aplication key is ${process.env.API_KEY}`);
 const app = express()
 app.use(cors());
 app.use(bodyParser.urlencoded({ extended: false }));
@@ -19,7 +19,6 @@ app.use(express.static('dist'))
 
 
 app.get('/', function (req, res) {
-    // res.sendFile('dist/index.html')
     res.sendFile(path.resolve('dist/index.html'))
 })
 

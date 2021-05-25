@@ -1,15 +1,16 @@
 function handleSubmit(event) {
     event.preventDefault()
 
-    // check what text was put into the form field
+    // check what URL was put into the form field
     let address = document.getElementById('url').value;
     const data = {
         address
     }
+ 
+
+    console.log("Form Submitted")
     
-
-    console.log("::: Form Submitted :::")
-
+// fetch data and update UI if URL is correct 
     if (Client.checkForUrl(address)) {
     fetch('http://localhost:8081/val', {
         method: 'POST',
@@ -28,6 +29,12 @@ function handleSubmit(event) {
                 document.getElementById('confidence').innerHTML = 'Confidence: ' + res.confidence;
                 document.getElementById('irony').innerHTML = 'Irony: ' + res.irony;
     })
+    .catch((error) => {
+        alert("Please provide correct URL!");
+    })
+}else{
+    console.log('error');
+    alert("Please provide correct URL!");
 }
 }
 export { handleSubmit }
